@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Rectangle2D?>
+
+<BorderPane cacheHint="ROTATE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ThirdController">
+    <bottom>
+        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="573.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loadImg" alignment="CENTER" mnemonicParsing="false" onAction="#loadImage" prefHeight="30.0" prefWidth="177.0" text="Load Image" />
+            </children>
+        </VBox>
+    </bottom>
+    <center>
+        <GridPane fx:id="gridPane" alignment="CENTER" hgap="20.0" maxHeight="700.0" maxWidth="700.0" prefHeight="700.0" prefWidth="700.0" vgap="10.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="IV00" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked00" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <ImageView fx:id="IV10" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked10" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <viewport>
+                        <Rectangle2D />
+                    </viewport></ImageView>
+                <ImageView fx:id="IV01" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked01" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <ImageView fx:id="IV11" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked11" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+    </center>
+   <right>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="735.0" prefWidth="200.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="100.0" />
+                  <Button fx:id="sob" mnemonicParsing="false" onAction="#OnSobel" prefHeight="30.0" prefWidth="170.0" text="Sobel算子边缘检测" />
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="100.0" />
+                  <Button fx:id="scha" mnemonicParsing="false" onAction="#OnScharr" prefHeight="30.0" prefWidth="170.0" text="Scharr滤波器" />
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="100.0" />
+                  <Button fx:id="lap" mnemonicParsing="false" onAction="#OnLaplace" prefHeight="30.0" prefWidth="170.0" text="Laplace算子边缘检测" />
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="100.0" />
+                  <Button fx:id="can" mnemonicParsing="false" onAction="#OnCanny" prefHeight="30.0" prefWidth="170.0" text="Canny算子边缘检测" />
+                  <Separator orientation="VERTICAL" prefHeight="26.0" prefWidth="100.0" />
+                  <Button fx:id="hild" mnemonicParsing="false" onAction="#OnHildreth" prefHeight="30.0" prefWidth="170.0" text="Hildreth算子边缘检测" />
+                  <Separator orientation="VERTICAL" prefHeight="338.0" prefWidth="100.0" />
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#OnBack" prefHeight="64.0" prefWidth="124.0" text="返回" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: opencv-410.jar
+Main-Class: sample.Main
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Rectangle2D?>
+
+<BorderPane cacheHint="ROTATE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondController">
+    <bottom>
+        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="573.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loadImg" alignment="CENTER" mnemonicParsing="false" onAction="#loadImage" prefHeight="30.0" prefWidth="177.0" text="Load Image" />
+            </children>
+        </VBox>
+    </bottom>
+    <center>
+        <GridPane alignment="CENTER" hgap="20.0" maxHeight="700.0" maxWidth="700.0" prefHeight="700.0" prefWidth="700.0" vgap="10.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="IV00" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked00" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <ImageView fx:id="IV10" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked10" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <viewport>
+                        <Rectangle2D />
+                    </viewport></ImageView>
+                <ImageView fx:id="IV01" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked01" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <ImageView fx:id="IV11" fitHeight="350.0" fitWidth="350.0" onMouseClicked="#OnClicked11" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+    </center>
+   <right>
+      <GridPane fx:id="gridPane" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="171.0" minHeight="0.0" prefHeight="108.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="315.0" minHeight="10.0" prefHeight="224.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="153.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="199.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <VBox alignment="TOP_CENTER" prefHeight="206.0" prefWidth="150.0" GridPane.columnIndex="1" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="150.0" text="图像的平滑" textFill="#07828d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="49.0" />
+                  <Button fx:id="SmoothnessBlur" mnemonicParsing="false" onAction="#OnSmoothnessBlur" prefHeight="30.0" prefWidth="130.0" text="单一滤波" />
+                  <Separator orientation="VERTICAL" prefHeight="14.0" prefWidth="83.0" />
+                  <Button fx:id="SmoothnessGBlur" mnemonicParsing="false" onAction="#OnSmoothnessGBlur" prefHeight="30.0" prefWidth="130.0" text="高斯滤波" />
+                  <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="87.0" />
+                  <Button fx:id="SmoothnessBBlur" mnemonicParsing="false" onAction="#OnSmoothnessBBlur" prefHeight="30.0" prefWidth="130.0" text="双边滤波" />
+                  <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="69.0" />
+                  <Button fx:id="SmoothnessMBlur" mnemonicParsing="false" onAction="#OnSmoothnessMBlur" prefHeight="30.0" prefWidth="130.0" text="中值滤波" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="49.0" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="150.0" text="图像的对比度增强" textFill="#07828d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="49.0" />
+                  <Button fx:id="EnhanceLog" mnemonicParsing="false" onAction="#OnEnhanceLog" prefHeight="30.0" prefWidth="130.0" text="对数log变换" />
+                  <Separator orientation="VERTICAL" prefHeight="9.0" prefWidth="62.0" />
+                  <Button fx:id="EnhanceLapras" mnemonicParsing="false" onAction="#OnEnhanceLapras" prefHeight="30.0" prefWidth="130.0" text="拉普拉斯算子" />
+                  <Separator orientation="VERTICAL" prefHeight="12.0" prefWidth="72.0" />
+                  <Button fx:id="EnhanceGamma" mnemonicParsing="false" onAction="#OnEnhanceGamma" prefHeight="30.0" prefWidth="130.0" text="伽马变换" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="150.0" text="图像的锐化" textFill="#07828d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="49.0" />
+                  <Button fx:id="ShapenSobel" mnemonicParsing="false" onAction="#OnShapenSobel" prefHeight="30.0" prefWidth="130.0" text="Sobel算子锐化" />
+                  <Separator orientation="VERTICAL" prefHeight="14.0" prefWidth="83.0" />
+                  <Button fx:id="ShapenLapras" mnemonicParsing="false" onAction="#OnShapenLapras" prefHeight="30.0" prefWidth="130.0" text="拉普拉斯锐化" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="150.0" text="图像的直方图修正" textFill="#07828d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="13.0" prefWidth="97.0" />
+                  <Button fx:id="Histogram" mnemonicParsing="false" onAction="#OnHistogram" prefHeight="30.0" prefWidth="130.0" text="直方图均值化" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </right>
+   <top>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#OnBack" prefHeight="0.0" prefWidth="118.0" text="返回" textFill="#198e9e">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <VBox alignment="TOP_RIGHT" prefHeight="57.0" prefWidth="156.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="136.0" />
+                  <Label alignment="CENTER" prefHeight="4.0" prefWidth="106.0" text="对比度" />
+                  <Separator orientation="VERTICAL" prefHeight="1.0" prefWidth="126.0" />
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="106.0" text="亮度" />
+               </children>
+            </VBox>
+            <VBox fx:id="barVbox" alignment="TOP_CENTER" prefHeight="68.0" prefWidth="680.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="5.0" prefWidth="133.0" />
+                  <Slider fx:id="contrastBar" max="300.0" onMouseDragged="#OnContrastAndBright" prefHeight="18.0" prefWidth="736.0" />
+                  <Separator orientation="VERTICAL" prefHeight="5.0" prefWidth="133.0" />
+                  <Slider fx:id="brightBar" max="200.0" onMouseDragged="#OnContrastAndBright" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

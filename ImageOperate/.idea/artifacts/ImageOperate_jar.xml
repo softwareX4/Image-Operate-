@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="ImageOperate:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ImageOperate_jar</output-path>
+    <root id="root">
+      <element id="directory" name="libs">
+        <element id="file-copy" path="G:/MyDownloads/openCV/opencv/build/java/opencv_java410.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/resource/opencv_java410.dll" />
+      </element>
+      <element id="archive" name="ImageOperate.jar">
+        <element id="module-output" name="ImageOperate" />
+      </element>
+    </root>
+  </artifact>
+</component>

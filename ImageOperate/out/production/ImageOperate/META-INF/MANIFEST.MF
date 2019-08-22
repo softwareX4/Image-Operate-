@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: libs/opencv_java410.jar
+Main-Class: sample.Main
