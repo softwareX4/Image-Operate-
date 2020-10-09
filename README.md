@@ -12,7 +12,7 @@ CSU software CV lab. Write by opencv for java
 
 - 加载图片——>load image
 
-  ![image-20201009181954995](C:\Users\辰巳\AppData\Roaming\Typora\typora-user-images\image-20201009181954995.png)
+  ![image-20201009181954995](G:\AAApersonal\learning\Finish_learn\大三下\数字图像\实验\Image-Operate-\ImageOperate\images\image-20201009181954995.png)
 
   
 
